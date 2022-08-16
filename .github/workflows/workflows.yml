@@ -46,7 +46,7 @@ jobs:
         dockstore
 
     - if: matrix.lang == 'cwl'
-      run: sudo apt-get install -y python-sponge
+      run: sudo apt-get install -y moreutils
 
     - name: Run workflows with CLI
       run: bash cli-script.sh

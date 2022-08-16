@@ -92,8 +92,10 @@ Usage:
 $> dockstore workflow wdl --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update > bamstats.wdl
 # make a runtime JSON template and edit it (or use the content of test.wdl.json above)
 $> dockstore workflow convert wdl2json --wdl bamstats.wdl > Dockstore.json
-# run it locally with the Dockstore CLI
-$> dockstore workflow launch --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update --json Dockstore.json
+# the WDL cromwell engine powers the Dockstore CLI but can be chatty, to reduce distracing warnings you can do the following
+$> printf "cromwell-vm-options: -DLOG_LEVEL=ERROR" >> ~/.dockstore/config
+# then run it locally with the Dockstore CLI
+$> dockstore workflow launch --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update --json test.wdl.json
 ```
 
 ## Running Nextflow Workflow
