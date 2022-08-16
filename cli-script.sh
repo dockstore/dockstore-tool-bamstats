@@ -13,7 +13,7 @@ if [[ "${LANGUAGE}" == "cwl" ]]; then
 elif [[ "${LANGUAGE}" == "wdl" ]]; then
     dockstore --script workflow wdl --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update | tee bamstats.wdl
     dockstore --script  workflow convert wdl2json --wdl bamstats.wdl | tee Dockstore.json
-    dockstore --script  workflow launch --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update --json Dockstore.json
+    dockstore --script  workflow launch --entry github.com/dockstore/dockstore-tool-bamstats/wdl:feature/update --json test.wdl.json 
 elif [[ "${LANGUAGE}" == "nfl" ]]; then
     echo "nextflow is not supported by the Dockstore CLI (yet?)"; 
 fi

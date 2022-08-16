@@ -44,5 +44,9 @@ jobs:
         mkdir ~/.dockstore
         printf "cromwell-vm-options: -DLOG_LEVEL=ERROR\nserver-url: https://dockstore.org/api" > ~/.dockstore/config
         dockstore
+
+    - if: matrix.lang == 'cwl'
+      run: sudo apt-get install -y python-sponge
+
     - name: Run workflows with CLI
       run: bash cli-script.sh
