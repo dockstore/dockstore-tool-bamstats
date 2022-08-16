@@ -29,8 +29,6 @@ jobs:
 
     - name: Setup engines
       run: bash install.sh
-      #    - name: Run workflows
-      #      run: bash script.sh
     - name: Setup CLI 
       run: | 
         curl -L -o dockstore https://github.com/dockstore/dockstore/releases/download/1.12.2/dockstore
