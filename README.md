@@ -92,7 +92,7 @@ Usage:
 $> dockstore workflow wdl --entry github.com/dockstore/dockstore-tool-bamstats/wdl:develop > bamstats.wdl
 # make a runtime JSON template and edit it (or use the content of test.wdl.json above)
 $> dockstore workflow convert wdl2json --wdl bamstats.wdl > Dockstore.json
-# the WDL cromwell engine powers the Dockstore CLI but can be chatty, to reduce distracing warnings you can do the following
+# the WDL cromwell engine powers the Dockstore CLI but can be chatty, to reduce distracting warnings you can do the following
 $> printf "cromwell-vm-options: -DLOG_LEVEL=ERROR" >> ~/.dockstore/config
 # then run it locally with the Dockstore CLI
 $> dockstore workflow launch --entry github.com/dockstore/dockstore-tool-bamstats/wdl:develop --json test.wdl.json
