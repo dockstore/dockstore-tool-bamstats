@@ -34,6 +34,7 @@ RUN chmod a+x /usr/local/bin/bamstats
 # switch back to the ubuntu user so this tool (and the files written) are not owned by root
 RUN groupadd -r -g 1000 ubuntu && useradd -r -g ubuntu -u 1000 -m ubuntu
 USER ubuntu
+RUN touch foo.txt
 
 # by default, /bin/bash is executed
 CMD ["/bin/bash"]
