@@ -32,10 +32,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          # list of Docker images to use as base name for tags
+          # list of Docker images to use as base name for tags, use your Docker Hub username/organization here
           images: |
-            name/app
-            ghcr.io/username/app
+            denisyuen/dockstore-tool-bamstats
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
