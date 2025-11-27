@@ -33,7 +33,7 @@ RUN chmod a+x /usr/local/bin/bamstats
 
 # switch back to the ubuntu user so this tool (and the files written) are not owned by root
 RUN groupadd -r -g 1000 ubuntu && useradd -r -g ubuntu -u 1000 -m ubuntu
-RUN touch foo.txt
+RUN touch platypus.txt
 USER ubuntu
 
 # by default, /bin/bash is executed
